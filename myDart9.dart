@@ -5,14 +5,15 @@ import 'dart:io';
 void main(){
   // print(Cookie().Shape);
   // print("${Cookie().size}cm");
-  Cookie cookie = Cookie();
-  print(cookie.Shape);
+  final cookie = Cookie();
+  // print(cookie.Shape);
   // cookie.baking();
   // final isCookieCooling = cookie.isCooling();
   // print(isCookieCooling);
 
   cookie.Shape = 'Rectangle';
-  print(cookie.Shape);
+  // print(cookie.Shape);
+  cookie.size = 32;
 }
 // PascalCase
 class  Cookie{
