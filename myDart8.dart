@@ -5,3 +5,8 @@ void main(){
 }
 
 void printStuff() => print('hi');
+// Anonmous Function
+
+// (){
+//   Block Of Code But No Name
+// }
