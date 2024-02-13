@@ -9,11 +9,12 @@ void main() {
   String thirdstring = '';
   // From 65 Ascii value Of Character Start And Use For fromCharCode method
   int alphabet = 65;
+  int g = 6;
   // Main loop For Itrestion  
-  for (int i = 0; i <= 6; i++) {
+  for (int i = 0; i <= g; i++) {
 
     // For Spacing 
-    for (int d = 6; d >= i; d--) {
+    for (int d = g; d >= i; d--) {
       // stdout.write(' ');
     }
     // For Storing Value Of Blank Space To First String
