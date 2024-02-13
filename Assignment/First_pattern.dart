@@ -1,13 +1,17 @@
 void main() {
   var star = '';
-  for (int i = 0; i < 5; i++) {
-   for(int j =0; j <= (i/2) ; j++){
-        star += '*'; 
-   }  if(i == 1){
-       print("***");
-     }
-    else{
+  int i = 0;
+  while (i < 5) {
+    int j = 0;
+    while (j <= (i / 2)) {
+      star += '*';
+      j++;
+    }
+    if (i == 1) {
+      print("***");
+    } else {
       print(star);
     }
+    i++;
   }
 }

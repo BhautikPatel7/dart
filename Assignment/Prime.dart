@@ -1,4 +1,3 @@
-import 'dart:io';
 void main() {
 //   Intialize Sum With Zero
   int sum = 0;
@@ -13,8 +12,8 @@ void main() {
     }
   }
   // Printing Sum
-  stdout.write("The Sum Of Prime Number Between 1 to 99999 Is:  ");
-  stdout.write(sum);
+ print("The Sum Of Prime Number Between 1 to 99999 Is:  $sum");
+
 }
 // Functin TO Chek Next Number iS Prime Or Not
 bool isPrime(int number) {

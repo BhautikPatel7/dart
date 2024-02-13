@@ -3,7 +3,6 @@ void main() {
   List<int> numbers = [1, 2, 3, 4];
   // Intialize Counter For Final Count
   int count = 0;
-  // print(numbers.length);
   // Using 3 Loop For Cheking Each Number from 1 to List.lenth
   for (var i = 1; i <= numbers.length; i++) {
     for (var j = 1; j <= numbers.length; j++) {
