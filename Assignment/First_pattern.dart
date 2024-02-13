@@ -22,19 +22,27 @@ void main() {
 
   // For Second Half
   // Define the number of rows
-  int y = 4;
+    int y = 4;
   String str = '';
-  int r = 0;
+  
   // Loop through each row
   while (y >= 0) {
     int j = 1;
     // Print asterisks based on the current row
     while (j <= y * 2 - 1) {
+      // Check if it's row three or four, then adjust the condition
+      if (y == 3 || y == 4) {
+        if (j != y * 2 - 1) {
+          str += '*';
+        }
+      } else {
+        str += '*';
+      }
       j++;
-      str += '*';
     }
-    // Print The String 
+    // Print the string
     print(str);
+    // Reset the string for the next row
     str = '';
     y--;
   }
