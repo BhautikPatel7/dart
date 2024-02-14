@@ -4,7 +4,7 @@ void main() {
   String star = '';
   int i = 0;
   // Outer   Loop
-  while (i < 5) {
+  while (i < 10) {
     int j = 0;
     // Inner Loop
     while (j <= (i / 2)) {
