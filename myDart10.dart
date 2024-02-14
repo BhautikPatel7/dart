@@ -1,25 +1,24 @@
-import 'dart:ffi';
-
 void main(){
-  final cookie = Cookie('tringle',12);
-  print(cookie.Shape);
-  print(cookie.size);
-  
-  
+  final cookie = Cookie( shape: 'tringle', size: 10);
+//   print(cookie.shape);
+//   print(cookie.size);
+//   cookie.shape = 'gol'; cant Change Due to Final
+//     print(cookie.shape);
 }
 class Cookie {
-String Shape;
-  double size;
-  Cookie(this.Shape, this.size){
-    print(this);
-    print('Cookie Constructor is Called');
-    baking();
+ final String? shape ;
+ final double? size;
+  Cookie( {required this.shape, required this.size}){
+//     print(this.shape);
+//     this.shape = shape;
+//     this.size = size;
+//     print('Cookie Constructor is Called');
+//     this.baking();
+  baking();
   }
-
-
   
   void baking(){
-    print('Cookie Is baking');
+  print('Your Cookie is $shape and $size Cm');
   }
 
   bool isCooling(){
