@@ -1,25 +1,30 @@
-import 'dart:io';
-
-void main(){
-  int starcount = 0;
-  bool flag =  true;
-  for(int i = 0; i <= 5; i++){
-    for(int j = 1; j <= i+1; j++){
-      if (i == 2 || i == 1) {
-        j += 2;
-       
+void main() {
+  int rowCount = 4;
+    for (int i = -1; i < rowCount; i++) {
+      if(i == -1){
+        print("*");
       }
       else{
-      if(flag){
-        j = j+1;
-        flag = false;
+      int starCount = 3 + i * (i + 1) ~/ 2;
+      String row = '';
+      for (int j = 0; j < starCount; j++) {
+        row += '*';
       }
-      }
-      
-
-       stdout.write(j);
+      print(row);
     }
-    print(' ');
-  }
-
+    }
+    for (int i = rowCount - 2; i >= -1; i--) {
+      if( i == -1){
+        print("*");
+      }
+      else{
+      int starCount = 3 + i * (i + 1) ~/ 2;
+      String row = '';
+      for (int j = 0; j < starCount; j++) {
+        row += '*';
+      }
+      print(row);
+    }
+    }
 }
+

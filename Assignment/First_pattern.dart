@@ -1,49 +1,45 @@
 void main() {
-  // Firsrt half
-  // Blank String
-  String star = '';
-  int i = 0;
-  // Outer   Loop
-  while (i < 10) {
-    int j = 0;
-    // Inner Loop
-    while (j <= (i / 2)) {
-      star += '*';
-      j++;
-    }
-    // For Second Row
-    if (i == 1) {
-      print("***");
+  // How many patterns we want to print
+  int rowCount = 4;
+  // i == -1 because of printing 1 star on the first line
+  int i = -1;
+  
+  // First half of the pattern (increasing star count)
+  while (i < rowCount) {
+    // For first star
+    if (i == -1) {
+      print("*");
     } else {
-      print(star);
+      // Increasing star count by 1, 2, 3, 5, 8
+      int starCount = 3 + i * (i + 1) ~/ 2;
+      // For storing value
+      String row = '';
+      int j = 0;
+      while (j < starCount) {
+        row += '*';
+        j++;
+      }
+      print(row);
     }
     i++;
   }
-
-  // For Second Half
-  // Define the number of rows
-    int y = 4;
-  String str = '';
   
-  // Loop through each row
-  while (y >= 0) {
-    int j = 1;
-    // Print asterisks based on the current row
-    while (j <= y * 2 - 1) {
-      // Check if it's row three or four, then adjust the condition
-      if (y == 3 || y == 4) {
-        if (j != y * 2 - 1) {
-          str += '*';
-        }
-      } else {
-        str += '*';
+  // Second half of the pattern (decreasing star count)
+  // Start With 2
+  i = rowCount - 2;
+  while (i >= -1) {
+    if (i == -1) {
+      print("*");
+    } else {
+      int starCount = 3 + i * (i + 1) ~/ 2;
+      String row = '';
+      int j = 0;
+      while (j < starCount) {
+        row += '*';
+        j++;
       }
-      j++;
+      print(row);
     }
-    // Print the string
-    print(str);
-    // Reset the string for the next row
-    str = '';
-    y--;
+    i--;
   }
 }
